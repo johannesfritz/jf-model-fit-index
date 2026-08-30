@@ -738,7 +738,11 @@ footer { border-top:1px solid var(--rule); margin-top:56px; padding-top:16px;
   try { savedScoring = localStorage.getItem('jmb-scoring'); } catch (e) {}
   if (savedScoring === 'nf') { scoring('nf'); }
   tabs.forEach(function (t) {
-    t.addEventListener('click', function () { show(t.dataset.pane); window.scrollTo({top: 0}); });
+    t.addEventListener('click', function () {
+      show(t.dataset.pane);
+      window.scrollTo({top: 0});
+      if (typeof window.__jmbSyncToc === 'function') { window.__jmbSyncToc(); }
+    });
   });
   var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
   var blocks = Array.prototype.slice.call(document.querySelectorAll('.classblock'));
@@ -747,15 +751,20 @@ footer { border-top:1px solid var(--rule); margin-top:56px; padding-top:16px;
     var syncToc = function () {
       ticking = false;
       // The active class is the last one whose top has passed the header line.
-      var line = 150, current = blocks[0].id;
-      for (var i = 0; i < blocks.length; i++) {
-        if (blocks[i].getBoundingClientRect().top <= line) { current = blocks[i].id; }
+      // Skip hidden blocks: while the pane is not displayed every rect is 0,
+      // which would make the last section win on first paint.
+      var visible = blocks.filter(function (b) { return b.offsetParent !== null; });
+      if (!visible.length) { return; }
+      var line = 150, current = visible[0].id;
+      for (var i = 0; i < visible.length; i++) {
+        if (visible[i].getBoundingClientRect().top <= line) { current = visible[i].id; }
       }
       tocLinks.forEach(function (a) { a.classList.toggle('on', a.dataset.cls === current); });
     };
     window.addEventListener('scroll', function () {
       if (!ticking) { ticking = true; requestAnimationFrame(syncToc); }
     }, {passive: true});
+    window.__jmbSyncToc = syncToc;
     syncToc();
   }
   var saved = null;
