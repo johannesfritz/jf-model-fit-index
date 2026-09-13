@@ -305,68 +305,70 @@ footer { border-top:1px solid var(--rule); margin-top:56px; padding-top:16px;
 
   <h3>Cost and time per cell</h3>
   <p class="meta">Independent of scoring.</p>
+  <div class="notes"><p class="meta">Every cost figure below is tagged with its basis. <code>cached-corrected</code>: recomputed by reprice.py from the cell&#x27;s saved raw stream against the vendor&#x27;s cache-read rate. <code>uncorrected</code>: the runner&#x27;s original figure, kept as-is because the cell&#x27;s provider reports no cached-token field. <code>mixed</code>: the arms pooled into this row carry both bases.
+Gemini cost and token figures are upper bounds: the vendor&#x27;s own reported total token count exceeds tracked input plus output tokens by an unexplained residual in most saved cells. One checked cell (monitoring-discovery-gta/gemini_gemini-3.1-pro-preview/r1) tracked input 572,965 plus output 11,392 = 584,357 tokens, against a reported total of 596,740 -- a 12,383-token gap this pass does not attempt to explain or correct.</p></div>
   
   <div class="grid2">
     <section class="card"><h3>Median cost per cell</h3><p class="meta">USD; lower is better</p><svg class="chart" viewBox="0 0 760 688" width="100%" role="img" aria-label="ranked bar chart">
 <text class="lbl" x="228" y="26.0" text-anchor="end">Claude Haiku 4.5</text>
-<path class="bar fam-anthropic" d="M244,12.0 H258.4963952386657 q4,0 4,4 V26.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Haiku 4.5: median USD per cell over 24 cells"><title>Claude Haiku 4.5: median USD per cell over 24 cells</title></path>
+<path class="bar fam-anthropic" d="M244,12.0 H258.4963952386657 q4,0 4,4 V26.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Haiku 4.5: median USD per cell over 24 cells (uncorrected)"><title>Claude Haiku 4.5: median USD per cell over 24 cells (uncorrected)</title></path>
 <text class="val" x="270.4963952386657" y="26.0">$0.19</text>
 <text class="lbl" x="228" y="60.0" text-anchor="end">meta/muse-glimmer-30b</text>
-<path class="bar fam-meta" d="M244,46.0 H259.77249708678653 q4,0 4,4 V60.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="meta/muse-glimmer-30b: median USD per cell over 24 cells"><title>meta/muse-glimmer-30b: median USD per cell over 24 cells</title></path>
+<path class="bar fam-meta" d="M244,46.0 H259.77249708678653 q4,0 4,4 V60.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="meta/muse-glimmer-30b: median USD per cell over 24 cells (uncorrected)"><title>meta/muse-glimmer-30b: median USD per cell over 24 cells (uncorrected)</title></path>
 <text class="val" x="271.77249708678653" y="60.0">$0.20</text>
 <text class="lbl" x="228" y="94.0" text-anchor="end">DeepSeek V4 Pro</text>
-<path class="bar fam-deepseek" d="M244,80.0 H283.55854742275903 q4,0 4,4 V94.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="DeepSeek V4 Pro: median USD per cell over 24 cells"><title>DeepSeek V4 Pro: median USD per cell over 24 cells</title></path>
+<path class="bar fam-deepseek" d="M244,80.0 H283.55854742275903 q4,0 4,4 V94.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="DeepSeek V4 Pro: median USD per cell over 24 cells (uncorrected)"><title>DeepSeek V4 Pro: median USD per cell over 24 cells (uncorrected)</title></path>
 <text class="val" x="295.55854742275903" y="94.0">$0.44</text>
 <text class="lbl" x="228" y="128.0" text-anchor="end">Gemini 3.1 Pro</text>
-<path class="bar fam-google" d="M244,114.0 H286.28232577894426 q4,0 4,4 V128.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Gemini 3.1 Pro: median USD per cell over 24 cells"><title>Gemini 3.1 Pro: median USD per cell over 24 cells</title></path>
+<path class="bar fam-google" d="M244,114.0 H286.28232577894426 q4,0 4,4 V128.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Gemini 3.1 Pro: median USD per cell over 24 cells (uncorrected)"><title>Gemini 3.1 Pro: median USD per cell over 24 cells (uncorrected)</title></path>
 <text class="val" x="298.28232577894426" y="128.0">$0.47</text>
 <text class="lbl" x="228" y="162.0" text-anchor="end">meta/muse-spark-1.3</text>
-<path class="bar fam-meta" d="M244,148.0 H297.9571458131405 q4,0 4,4 V162.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="meta/muse-spark-1.3: median USD per cell over 24 cells"><title>meta/muse-spark-1.3: median USD per cell over 24 cells</title></path>
+<path class="bar fam-meta" d="M244,148.0 H297.9571458131405 q4,0 4,4 V162.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="meta/muse-spark-1.3: median USD per cell over 24 cells (uncorrected)"><title>meta/muse-spark-1.3: median USD per cell over 24 cells (uncorrected)</title></path>
 <text class="val" x="309.9571458131405" y="162.0">$0.59</text>
 <text class="lbl" x="228" y="196.0" text-anchor="end">meta/muse-spark-1.2</text>
-<path class="bar fam-meta" d="M244,182.0 H311.5034087320171 q4,0 4,4 V196.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="meta/muse-spark-1.2: median USD per cell over 24 cells"><title>meta/muse-spark-1.2: median USD per cell over 24 cells</title></path>
+<path class="bar fam-meta" d="M244,182.0 H311.5034087320171 q4,0 4,4 V196.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="meta/muse-spark-1.2: median USD per cell over 24 cells (uncorrected)"><title>meta/muse-spark-1.2: median USD per cell over 24 cells (uncorrected)</title></path>
 <text class="val" x="323.5034087320171" y="196.0">$0.73</text>
 <text class="lbl" x="228" y="230.0" text-anchor="end">Claude Opus 4.5</text>
-<path class="bar fam-anthropic" d="M244,216.0 H317.53858782657943 q4,0 4,4 V230.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Opus 4.5: median USD per cell over 24 cells"><title>Claude Opus 4.5: median USD per cell over 24 cells</title></path>
+<path class="bar fam-anthropic" d="M244,216.0 H317.53858782657943 q4,0 4,4 V230.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Opus 4.5: median USD per cell over 24 cells (uncorrected)"><title>Claude Opus 4.5: median USD per cell over 24 cells (uncorrected)</title></path>
 <text class="val" x="329.53858782657943" y="230.0">$0.79</text>
-<text class="lbl" x="228" y="264.0" text-anchor="end">GLM 5.2 (Z.AI)</text>
-<path class="bar fam-zai" d="M244,250.0 H340.40102153055335 q4,0 4,4 V264.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="GLM 5.2 (Z.AI): median USD per cell over 24 cells"><title>GLM 5.2 (Z.AI): median USD per cell over 24 cells</title></path>
-<text class="val" x="352.40102153055335" y="264.0">$1.02</text>
-<text class="lbl" x="228" y="298.0" text-anchor="end">Claude Sonnet 5</text>
-<path class="bar fam-anthropic" d="M244,284.0 H347.27644598847786 q4,0 4,4 V298.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Sonnet 5: median USD per cell over 24 cells"><title>Claude Sonnet 5: median USD per cell over 24 cells</title></path>
-<text class="val" x="359.27644598847786" y="298.0">$1.09</text>
-<text class="lbl" x="228" y="332.0" text-anchor="end">Gemini 3.7 Flash</text>
-<path class="bar fam-google" d="M244,318.0 H366.6174433420821 q4,0 4,4 V332.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Gemini 3.7 Flash: median USD per cell over 24 cells"><title>Gemini 3.7 Flash: median USD per cell over 24 cells</title></path>
-<text class="val" x="378.6174433420821" y="332.0">$1.29</text>
-<text class="lbl" x="228" y="366.0" text-anchor="end">GLM 5.3 (Z.AI)</text>
-<path class="bar fam-zai" d="M244,352.0 H367.12805070625006 q4,0 4,4 V366.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="GLM 5.3 (Z.AI): median USD per cell over 24 cells"><title>GLM 5.3 (Z.AI): median USD per cell over 24 cells</title></path>
-<text class="val" x="379.12805070625006" y="366.0">$1.30</text>
-<text class="lbl" x="228" y="400.0" text-anchor="end">Kimi K3</text>
-<path class="bar fam-moonshot" d="M244,386.0 H380.95292029230154 q4,0 4,4 V400.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Kimi K3: median USD per cell over 24 cells"><title>Kimi K3: median USD per cell over 24 cells</title></path>
-<text class="val" x="392.95292029230154" y="400.0">$1.44</text>
-<text class="lbl" x="228" y="434.0" text-anchor="end">Claude Opus 4.8</text>
-<path class="bar fam-anthropic" d="M244,420.0 H389.5953628175947 q4,0 4,4 V434.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Opus 4.8: median USD per cell over 24 cells"><title>Claude Opus 4.8: median USD per cell over 24 cells</title></path>
-<text class="val" x="401.5953628175947" y="434.0">$1.53</text>
-<text class="lbl" x="228" y="468.0" text-anchor="end">Claude Opus 5</text>
-<path class="bar fam-anthropic" d="M244,454.0 H413.19685155135426 q4,0 4,4 V468.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Opus 5: median USD per cell over 24 cells"><title>Claude Opus 5: median USD per cell over 24 cells</title></path>
-<text class="val" x="425.19685155135426" y="468.0">$1.77</text>
-<text class="lbl" x="228" y="502.0" text-anchor="end">Gemini 3.5 Flash</text>
-<path class="bar fam-google" d="M244,488.0 H415.21717870250376 q4,0 4,4 V502.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Gemini 3.5 Flash: median USD per cell over 24 cells"><title>Gemini 3.5 Flash: median USD per cell over 24 cells</title></path>
-<text class="val" x="427.21717870250376" y="502.0">$1.79</text>
-<text class="lbl" x="228" y="536.0" text-anchor="end">gemini-3.8-flash</text>
-<path class="bar fam-google" d="M244,522.0 H468.68878167779326 q4,0 4,4 V536.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="gemini-3.8-flash: median USD per cell over 24 cells"><title>gemini-3.8-flash: median USD per cell over 24 cells</title></path>
-<text class="val" x="480.68878167779326" y="536.0">$2.33</text>
-<text class="lbl" x="228" y="570.0" text-anchor="end">GPT-5.6 Sol (Codex)</text>
-<path class="bar fam-openai" d="M244,556.0 H485.10937346852097 q4,0 4,4 V570.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="GPT-5.6 Sol (Codex): median USD per cell over 24 cells"><title>GPT-5.6 Sol (Codex): median USD per cell over 24 cells</title></path>
-<text class="val" x="497.10937346852097" y="570.0">$2.50</text>
-<text class="lbl" x="228" y="604.0" text-anchor="end">GPT-5.5 (Codex)</text>
-<path class="bar fam-openai" d="M244,590.0 H530.475752262505 q4,0 4,4 V604.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="GPT-5.5 (Codex): median USD per cell over 24 cells"><title>GPT-5.5 (Codex): median USD per cell over 24 cells</title></path>
-<text class="val" x="542.475752262505" y="604.0">$2.96</text>
+<text class="lbl" x="228" y="264.0" text-anchor="end">GPT-5.6 Sol (Codex)</text>
+<path class="bar fam-openai" d="M244,250.0 H324.2553608573016 q4,0 4,4 V264.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="GPT-5.6 Sol (Codex): median USD per cell over 24 cells (cached-corrected)"><title>GPT-5.6 Sol (Codex): median USD per cell over 24 cells (cached-corrected)</title></path>
+<text class="val" x="336.2553608573016" y="264.0">$0.86</text>
+<text class="lbl" x="228" y="298.0" text-anchor="end">GPT-5.5 (Codex)</text>
+<path class="bar fam-openai" d="M244,284.0 H331.0974701327554 q4,0 4,4 V298.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="GPT-5.5 (Codex): median USD per cell over 24 cells (cached-corrected)"><title>GPT-5.5 (Codex): median USD per cell over 24 cells (cached-corrected)</title></path>
+<text class="val" x="343.0974701327554" y="298.0">$0.93</text>
+<text class="lbl" x="228" y="332.0" text-anchor="end">GLM 5.2 (Z.AI)</text>
+<path class="bar fam-zai" d="M244,318.0 H340.40102153055335 q4,0 4,4 V332.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="GLM 5.2 (Z.AI): median USD per cell over 24 cells (uncorrected)"><title>GLM 5.2 (Z.AI): median USD per cell over 24 cells (uncorrected)</title></path>
+<text class="val" x="352.40102153055335" y="332.0">$1.02</text>
+<text class="lbl" x="228" y="366.0" text-anchor="end">Claude Sonnet 5</text>
+<path class="bar fam-anthropic" d="M244,352.0 H347.27644598847786 q4,0 4,4 V366.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Sonnet 5: median USD per cell over 24 cells (uncorrected)"><title>Claude Sonnet 5: median USD per cell over 24 cells (uncorrected)</title></path>
+<text class="val" x="359.27644598847786" y="366.0">$1.09</text>
+<text class="lbl" x="228" y="400.0" text-anchor="end">Gemini 3.7 Flash</text>
+<path class="bar fam-google" d="M244,386.0 H366.6174433420821 q4,0 4,4 V400.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Gemini 3.7 Flash: median USD per cell over 24 cells (uncorrected)"><title>Gemini 3.7 Flash: median USD per cell over 24 cells (uncorrected)</title></path>
+<text class="val" x="378.6174433420821" y="400.0">$1.29</text>
+<text class="lbl" x="228" y="434.0" text-anchor="end">GLM 5.3 (Z.AI)</text>
+<path class="bar fam-zai" d="M244,420.0 H367.12805070625006 q4,0 4,4 V434.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="GLM 5.3 (Z.AI): median USD per cell over 24 cells (uncorrected)"><title>GLM 5.3 (Z.AI): median USD per cell over 24 cells (uncorrected)</title></path>
+<text class="val" x="379.12805070625006" y="434.0">$1.30</text>
+<text class="lbl" x="228" y="468.0" text-anchor="end">Kimi K3</text>
+<path class="bar fam-moonshot" d="M244,454.0 H380.95292029230154 q4,0 4,4 V468.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Kimi K3: median USD per cell over 24 cells (uncorrected)"><title>Kimi K3: median USD per cell over 24 cells (uncorrected)</title></path>
+<text class="val" x="392.95292029230154" y="468.0">$1.44</text>
+<text class="lbl" x="228" y="502.0" text-anchor="end">Claude Opus 4.8</text>
+<path class="bar fam-anthropic" d="M244,488.0 H389.5953628175947 q4,0 4,4 V502.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Opus 4.8: median USD per cell over 24 cells (uncorrected)"><title>Claude Opus 4.8: median USD per cell over 24 cells (uncorrected)</title></path>
+<text class="val" x="401.5953628175947" y="502.0">$1.53</text>
+<text class="lbl" x="228" y="536.0" text-anchor="end">Claude Opus 5</text>
+<path class="bar fam-anthropic" d="M244,522.0 H413.19685155135426 q4,0 4,4 V536.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Opus 5: median USD per cell over 24 cells (uncorrected)"><title>Claude Opus 5: median USD per cell over 24 cells (uncorrected)</title></path>
+<text class="val" x="425.19685155135426" y="536.0">$1.77</text>
+<text class="lbl" x="228" y="570.0" text-anchor="end">Gemini 3.5 Flash</text>
+<path class="bar fam-google" d="M244,556.0 H415.21717870250376 q4,0 4,4 V570.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Gemini 3.5 Flash: median USD per cell over 24 cells (uncorrected)"><title>Gemini 3.5 Flash: median USD per cell over 24 cells (uncorrected)</title></path>
+<text class="val" x="427.21717870250376" y="570.0">$1.79</text>
+<text class="lbl" x="228" y="604.0" text-anchor="end">gemini-3.8-flash</text>
+<path class="bar fam-google" d="M244,590.0 H468.68878167779326 q4,0 4,4 V604.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="gemini-3.8-flash: median USD per cell over 24 cells (uncorrected)"><title>gemini-3.8-flash: median USD per cell over 24 cells (uncorrected)</title></path>
+<text class="val" x="480.68878167779326" y="604.0">$2.33</text>
 <text class="lbl" x="228" y="638.0" text-anchor="end">Claude Fable 5</text>
-<path class="bar fam-anthropic" d="M244,624.0 H587.4188384173901 q4,0 4,4 V638.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Fable 5: median USD per cell over 24 cells"><title>Claude Fable 5: median USD per cell over 24 cells</title></path>
+<path class="bar fam-anthropic" d="M244,624.0 H587.4188384173901 q4,0 4,4 V638.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="Claude Fable 5: median USD per cell over 24 cells (uncorrected)"><title>Claude Fable 5: median USD per cell over 24 cells (uncorrected)</title></path>
 <text class="val" x="599.4188384173901" y="638.0">$3.54</text>
 <text class="lbl" x="228" y="672.0" text-anchor="end">claude-fable-5-1</text>
-<path class="bar fam-anthropic" d="M244,658.0 H672.0 q4,0 4,4 V672.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="claude-fable-5-1: median USD per cell over 24 cells"><title>claude-fable-5-1: median USD per cell over 24 cells</title></path>
+<path class="bar fam-anthropic" d="M244,658.0 H672.0 q4,0 4,4 V672.0 q0,4 -4,4 H244 Z" tabindex="0" data-tip="claude-fable-5-1: median USD per cell over 24 cells (uncorrected)"><title>claude-fable-5-1: median USD per cell over 24 cells (uncorrected)</title></path>
 <text class="val" x="684.0" y="672.0">$4.41</text>
 </svg></section>
     <section class="card"><h3>Median wall-clock per cell</h3><p class="meta">seconds; lower is better</p><svg class="chart" viewBox="0 0 760 688" width="100%" role="img" aria-label="ranked bar chart">
@@ -444,7 +446,7 @@ footer { border-top:1px solid var(--rule); margin-top:56px; padding-top:16px;
   <h3>Routing table</h3>
   <p class="meta">Produced by the run, not yet accepted. Five classes
   carry no recommendation, either because the arms do not separate or because the judged class is contested.</p>
-  <div class='scroll'><table><thead><tr><th>class</th><th>recommended arm</th><th>runner-up</th><th>confidence</th><th>basis</th></tr></thead><tbody><tr><th scope="row">dev-python</th><td>anthropic/claude-haiku-4-5-20251001</td><td>deepseek/deepseek-v4-pro</td><td>hypothesis: n=2 task(s), k=2</td><td>pass rate 1.00 vs 1.00</td></tr><tr><th scope="row">dev-r-data</th><td>anthropic/claude-haiku-4-5-20251001</td><td>deepseek/deepseek-v4-pro</td><td>hypothesis: n=1 task(s), k=2</td><td>pass rate 1.00 vs 1.00</td></tr><tr><th scope="row">harness-bash</th><td>anthropic/claude-haiku-4-5-20251001</td><td>gemini/gemini-3.1-pro-preview</td><td>hypothesis: n=2 task(s), k=2</td><td>pass rate 0.50 vs 0.50</td></tr><tr><th scope="row">monitoring-discovery</th><td>anthropic/claude-haiku-4-5-20251001</td><td>openrouter/meta/muse-spark-1.3</td><td>hypothesis: n=2 task(s), k=2</td><td>pass rate 0.50 vs 0.50</td></tr><tr><th scope="row">writing-analytical</th><td>no recommendation (see harden list)</td><td>n/a</td><td>hypothesis: n=2 task(s), k=1</td><td>rank</td></tr><tr><th scope="row">ceo-doc</th><td>no recommendation (see harden list)</td><td>n/a</td><td>hypothesis: n=2 task(s), k=1</td><td>rank</td></tr><tr><th scope="row">planning-slice</th><td>no recommendation (see harden list)</td><td>n/a</td><td>hypothesis: n=2 task(s), k=1</td><td>rank</td></tr><tr><th scope="row">monitoring-review</th><td>no recommendation (see harden list)</td><td>n/a</td><td>hypothesis: n=2 task(s), k=1</td><td>rank</td></tr><tr><th scope="row">monitoring-entry</th><td>no recommendation (see harden list)</td><td>n/a</td><td>hypothesis: n=2 task(s), k=1</td><td>rank</td></tr></tbody></table></div>
+  <div class='scroll'><table><thead><tr><th>class</th><th>recommended arm</th><th>runner-up</th><th>confidence</th><th>basis</th></tr></thead><tbody><tr><th scope="row">dev-python</th><td>anthropic/claude-haiku-4-5-20251001</td><td>codex/gpt-5.6-sol</td><td>hypothesis: n=2 task(s), k=2</td><td>pass rate 1.00 vs 1.00</td></tr><tr><th scope="row">dev-r-data</th><td>anthropic/claude-haiku-4-5-20251001</td><td>codex/gpt-5.6-sol</td><td>hypothesis: n=1 task(s), k=2</td><td>pass rate 1.00 vs 1.00</td></tr><tr><th scope="row">harness-bash</th><td>anthropic/claude-haiku-4-5-20251001</td><td>gemini/gemini-3.1-pro-preview</td><td>hypothesis: n=2 task(s), k=2</td><td>pass rate 0.50 vs 0.50</td></tr><tr><th scope="row">monitoring-discovery</th><td>anthropic/claude-haiku-4-5-20251001</td><td>openrouter/meta/muse-spark-1.3</td><td>hypothesis: n=2 task(s), k=2</td><td>pass rate 0.50 vs 0.50</td></tr><tr><th scope="row">writing-analytical</th><td>no recommendation (see harden list)</td><td>n/a</td><td>hypothesis: n=2 task(s), k=1</td><td>rank</td></tr><tr><th scope="row">ceo-doc</th><td>no recommendation (see harden list)</td><td>n/a</td><td>hypothesis: n=2 task(s), k=1</td><td>rank</td></tr><tr><th scope="row">planning-slice</th><td>no recommendation (see harden list)</td><td>n/a</td><td>hypothesis: n=2 task(s), k=1</td><td>rank</td></tr><tr><th scope="row">monitoring-review</th><td>no recommendation (see harden list)</td><td>n/a</td><td>hypothesis: n=2 task(s), k=1</td><td>rank</td></tr><tr><th scope="row">monitoring-entry</th><td>no recommendation (see harden list)</td><td>n/a</td><td>hypothesis: n=2 task(s), k=1</td><td>rank</td></tr></tbody></table></div>
 
   <h3>Harden list</h3>
   <p class="meta">What the run says about the suite itself rather than about the models.</p>
@@ -534,7 +536,7 @@ footer { border-top:1px solid var(--rule); margin-top:56px; padding-top:16px;
   <ol class="steps rules">
     <li><p class="sh">The mechanical group must separate the arms</p><p class="sb">Best-to-worst spread of at least 2 cells. Mechanical group discriminates: yes &#8212; best&#8211;worst spread 9 cells (anthropic/claude-haiku-4-5-20251001 10/14 vs openrouter/meta/muse-glimmer-30b 1/13); threshold 2 cells.</p></li>
     <li><p class="sh">At least two of the three judged classes must discriminate</p><p class="sb">Judged classes that discriminate: 0 of 5 (none); need &gt;= 2.</p></li>
-    <li><p class="sh">The panel must be worth its cost against one judge alone</p><p class="sb">Panel vs Opus solo: the ordering changes on 1 class (ceo-doc rho=0.76; rho &lt; 0.80). planning-slice: mechanical order openrouter/meta/muse-glimmer-30b &gt; gemini/gemini-3.8-flash &gt; gemini/gemini-3.7-flash &gt; deepseek/deepseek-v4-pro &gt; openrouter/meta/muse-spark-1.2 &gt; openrouter/meta/muse-spark-1.3 &gt; anthropic/claude-haiku-4-5-20251001 &gt; glm/glm-5.3 &gt; gemini/gemini-3.5-flash &gt; gemini/gemini-3.1-pro-preview &gt; openrouter/moonshotai/kimi-k3 &gt; glm/glm-5.2 &gt; anthropic/claude-opus-4-5-20251101 &gt; codex/gpt-5.5 &gt; anthropic/claude-sonnet-5 &gt; codex/gpt-5.6-sol &gt; anthropic/claude-opus-4-8 &gt; anthropic/claude-fable-5 &gt; anthropic/claude-opus-5 &gt; anthropic/claude-fable-5-1 (pass rate) vs judged order anthropic/claude-opus-5 &gt; anthropic/claude-fable-5 &gt; anthropic/claude-fable-5-1 &gt; codex/gpt-5.6-sol &gt; anthropic/claude-opus-4-8 &gt; deepseek/deepseek-v4-pro &gt; glm/glm-5.3 &gt; codex/gpt-5.5 &gt; openrouter/moonshotai/kimi-k3 &gt; anthropic/claude-sonnet-5 &gt; glm/glm-5.2 &gt; openrouter/meta/muse-spark-1.3 &gt; gemini/gemini-3.1-pro-preview &gt; openrouter/meta/muse-spark-1.2 &gt; gemini/gemini-3.8-flash &gt; anthropic/claude-opus-4-5-20251101 &gt; gemini/gemini-3.7-flash &gt; gemini/gemini-3.5-flash &gt; anthropic/claude-haiku-4-5-20251001 &gt; openrouter/meta/muse-glimmer-30b (panel rank); top arm agrees: no</p></li>
+    <li><p class="sh">The panel must be worth its cost against one judge alone</p><p class="sb">Panel vs Opus solo: the ordering changes on 1 class (ceo-doc rho=0.76; rho &lt; 0.80). planning-slice: mechanical order openrouter/meta/muse-glimmer-30b &gt; gemini/gemini-3.8-flash &gt; gemini/gemini-3.7-flash &gt; deepseek/deepseek-v4-pro &gt; openrouter/meta/muse-spark-1.2 &gt; openrouter/meta/muse-spark-1.3 &gt; anthropic/claude-haiku-4-5-20251001 &gt; glm/glm-5.3 &gt; gemini/gemini-3.5-flash &gt; gemini/gemini-3.1-pro-preview &gt; openrouter/moonshotai/kimi-k3 &gt; glm/glm-5.2 &gt; anthropic/claude-opus-4-5-20251101 &gt; codex/gpt-5.6-sol &gt; codex/gpt-5.5 &gt; anthropic/claude-sonnet-5 &gt; anthropic/claude-opus-4-8 &gt; anthropic/claude-fable-5 &gt; anthropic/claude-opus-5 &gt; anthropic/claude-fable-5-1 (pass rate) vs judged order anthropic/claude-opus-5 &gt; anthropic/claude-fable-5 &gt; anthropic/claude-fable-5-1 &gt; codex/gpt-5.6-sol &gt; anthropic/claude-opus-4-8 &gt; deepseek/deepseek-v4-pro &gt; glm/glm-5.3 &gt; codex/gpt-5.5 &gt; openrouter/moonshotai/kimi-k3 &gt; anthropic/claude-sonnet-5 &gt; glm/glm-5.2 &gt; openrouter/meta/muse-spark-1.3 &gt; gemini/gemini-3.1-pro-preview &gt; openrouter/meta/muse-spark-1.2 &gt; gemini/gemini-3.8-flash &gt; anthropic/claude-opus-4-5-20251101 &gt; gemini/gemini-3.7-flash &gt; gemini/gemini-3.5-flash &gt; anthropic/claude-haiku-4-5-20251001 &gt; openrouter/meta/muse-glimmer-30b (panel rank); top arm agrees: no</p></li>
   </ol>
   <p class="callout">All three must hold for the run to claim its objective. This run reports
   <b>objective missed</b> and the routing table is left as a hypothesis.</p>
